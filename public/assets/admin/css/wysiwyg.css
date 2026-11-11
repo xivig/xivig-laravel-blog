@@ -1,0 +1,295 @@
+/**
+ * XIVIG Maison Gazette - Admin WYSIWYG Editor Styles
+ * Ultramodern, shared-hosting compatible styling for Summernote-BS5 and TinyMCE 7
+ * Supports dynamic Dark Mode and Light Mode with luxury gold accents
+ */
+
+/* Container & Frame Defaults */
+.note-editor.note-frame {
+    border: 1px solid var(--xivig-border-subtle, rgba(0, 0, 0, 0.1)) !important;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    background: var(--bs-body-bg, #ffffff) !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    width: 100% !important;
+}
+
+.note-editor.note-frame:focus-within {
+    border-color: #cba358 !important;
+    box-shadow: 0 0 0 3px rgba(203, 163, 88, 0.18), 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Toolbar Styling */
+.note-editor .note-toolbar {
+    background-color: rgba(203, 163, 88, 0.04) !important;
+    border-bottom: 1px solid var(--xivig-border-subtle, rgba(0, 0, 0, 0.08)) !important;
+    padding: 0.65rem 0.85rem !important;
+    margin: 0 !important;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    z-index: 20 !important;
+}
+
+.note-editor .note-toolbar .note-btn-group {
+    margin-right: 4px !important;
+}
+
+.note-editor .note-toolbar .note-btn {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: var(--bs-body-color, #1f232d) !important;
+    border-radius: 8px !important;
+    padding: 5px 11px !important;
+    font-size: 13px !important;
+    font-weight: 500;
+    transition: all 0.2s ease !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
+}
+
+.note-editor .note-toolbar .note-btn:hover {
+    background: #cba358 !important;
+    color: #000000 !important;
+    border-color: #cba358 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(203, 163, 88, 0.3) !important;
+}
+
+.note-editor .note-toolbar .note-btn.active {
+    background: #cba358 !important;
+    color: #000000 !important;
+    border-color: #cba358 !important;
+}
+
+/* Dropdown Menu Restraints (prevents H1-H6 expansion) */
+.note-editor .note-dropdown-menu {
+    min-width: 200px !important;
+    padding: 8px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background: #ffffff !important;
+    z-index: 1055 !important;
+}
+
+.note-editor .note-dropdown-menu h1,
+.note-editor .note-dropdown-menu h2,
+.note-editor .note-dropdown-menu h3,
+.note-editor .note-dropdown-menu h4,
+.note-editor .note-dropdown-menu h5,
+.note-editor .note-dropdown-menu h6,
+.note-editor .note-dropdown-menu p {
+    margin: 0 !important;
+    padding: 5px 10px !important;
+    line-height: 1.25 !important;
+    font-weight: 600 !important;
+    color: #1f232d !important;
+    width: auto !important;
+}
+
+.note-editor .note-dropdown-item {
+    display: block !important;
+    padding: 6px 12px !important;
+    font-size: 13px !important;
+    text-decoration: none !important;
+    color: #1f232d !important;
+    border-radius: 6px !important;
+    transition: background 0.15s ease;
+}
+
+.note-editor .note-dropdown-item:hover {
+    background: rgba(203, 163, 88, 0.15) !important;
+    color: #9e7930 !important;
+}
+
+/* Color Palette Grid */
+.note-editor .note-color-palette {
+    line-height: 0 !important;
+    padding: 6px !important;
+}
+
+.note-editor .note-color-row {
+    height: 22px !important;
+}
+
+.note-editor .note-color-btn {
+    width: 20px !important;
+    height: 20px !important;
+    padding: 0 !important;
+    margin: 1px !important;
+    border: 1px solid rgba(0, 0, 0, 0.15) !important;
+    border-radius: 4px !important;
+}
+
+/* Editable Text Surface */
+.note-editor .note-editable {
+    background-color: #ffffff !important;
+    color: #14161b !important;
+    padding: 1.5rem !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.75;
+    min-height: 380px;
+}
+
+.note-editor .note-editable p {
+    margin-bottom: 1.25rem;
+}
+
+.note-editor .note-editable h2,
+.note-editor .note-editable h3,
+.note-editor .note-editable h4 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.85rem;
+    font-weight: 700;
+}
+
+.note-editor .note-editable blockquote {
+    border-left: 4px solid #cba358;
+    padding: 0.75rem 1.25rem;
+    margin: 1.5rem 0;
+    background: rgba(203, 163, 88, 0.05);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.note-editor .note-editable img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.note-editor .note-statusbar {
+    background-color: rgba(0, 0, 0, 0.02) !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.note-editor .note-placeholder {
+    color: #8b92a2 !important;
+    padding: 1.5rem !important;
+    font-size: 0.95rem;
+}
+
+/* Code View Mode */
+.note-editor .note-codable {
+    background-color: #0d1117 !important;
+    color: #58a6ff !important;
+    font-family: "JetBrains Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace !important;
+    font-size: 13px !important;
+    padding: 1.25rem !important;
+}
+
+/* ==============================================================================
+ * DARK MODE ADAPTATIONS ([data-bs-theme="dark"])
+ * ============================================================================== */
+[data-bs-theme="dark"] .note-editor.note-frame {
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    background: #111319 !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+[data-bs-theme="dark"] .note-editor.note-frame:focus-within {
+    border-color: #cba358 !important;
+    box-shadow: 0 0 0 3px rgba(203, 163, 88, 0.22), 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+[data-bs-theme="dark"] .note-editor .note-toolbar {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-toolbar .note-btn {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: #e6e8ee !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-toolbar .note-btn:hover {
+    background: #cba358 !important;
+    color: #000000 !important;
+    border-color: #cba358 !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-toolbar .note-btn.active {
+    background: #cba358 !important;
+    color: #000000 !important;
+    border-color: #cba358 !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu {
+    background: #181b24 !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h1,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h2,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h3,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h4,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h5,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu h6,
+[data-bs-theme="dark"] .note-editor .note-dropdown-menu p {
+    color: #e6e8ee !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-dropdown-item {
+    color: #e6e8ee !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-dropdown-item:hover {
+    background: rgba(203, 163, 88, 0.2) !important;
+    color: #f5e2b3 !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-editable {
+    background-color: #111319 !important;
+    color: #e6e8ee !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-editable blockquote {
+    background: rgba(203, 163, 88, 0.08);
+    color: #f5e2b3;
+}
+
+[data-bs-theme="dark"] .note-editor .note-statusbar {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-bs-theme="dark"] .note-editor .note-placeholder {
+    color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Modals (Link/Image Insert Dialogs) */
+.note-modal .modal-content {
+    border-radius: 1rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-bs-theme="dark"] .note-modal .modal-content {
+    background: #181b24 !important;
+    border-color: rgba(255, 255, 255, 0.12) !important;
+    color: #e6e8ee !important;
+}
+
+[data-bs-theme="dark"] .note-modal .form-control {
+    background: #111319 !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    color: #e6e8ee !important;
+}
+
+.note-modal .btn-primary {
+    background: linear-gradient(135deg, #f5e2b3 0%, #cba358 50%, #9e7930 100%) !important;
+    border: none !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    border-radius: 999px !important;
+    padding: 0.45rem 1.25rem !important;
+}

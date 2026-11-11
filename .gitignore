@@ -1,0 +1,66 @@
+# Laravel Standard Ignores
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+
+# SQLite Database Files (Never commit or distribute development databases)
+/database/*.sqlite
+/database/*.sqlite-journal
+/database/*.sqlite-shm
+/database/*.sqlite-wal
+
+# Backups Vault (Backups contain sensitive application snapshots)
+/storage/app/backups/*
+!/storage/app/backups/.gitignore
+!/storage/app/backups/.gitkeep
+
+# Application Logs
+/storage/logs/*
+!/storage/logs/.gitignore
+!/storage/logs/.gitkeep
+
+# Active Sessions
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+!/storage/framework/sessions/.gitkeep
+
+# Cache & Compiled Views
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+!/storage/framework/cache/.gitkeep
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+!/storage/framework/views/.gitkeep
+
+# Bootstrap Cache
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+!/bootstrap/cache/.gitkeep
+
+# Distribution & Build Artefacts
+/dist/
+*.zip
+*.tar.gz
+*.tgz
+
+# IDE & OS Artefacts
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+desktop.ini

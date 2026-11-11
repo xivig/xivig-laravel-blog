@@ -1,0 +1,23 @@
+# Path-based git attributes & archive export exclusions
+* text=auto eol=lf
+*.blade.php text diff=php
+*.php text diff=php
+*.css text
+*.js text
+*.json text
+*.md text
+
+# Exclude sensitive development, database, backup, and log files from git archives
+database/*.sqlite export-ignore
+database/*.sqlite-* export-ignore
+storage/app/backups/* export-ignore
+storage/logs/* export-ignore
+storage/framework/sessions/* export-ignore
+storage/framework/cache/* export-ignore
+storage/framework/views/* export-ignore
+.env export-ignore
+.env.* export-ignore
+tests/ export-ignore
+phpunit.xml export-ignore
+run_tests.php export-ignore
+.phpunit.result.cache export-ignore
